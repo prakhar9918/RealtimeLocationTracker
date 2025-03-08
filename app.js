@@ -8,6 +8,7 @@ const io = socketio(server);
 //Socketio BoilerPlate
 
 app.set("view engine","ejs");
+app.set("views", path.join(__dirname, "views")); 
 app.use(express.static(path.join(__dirname,"public")));
 
 io.on("connection" ,function(socket){
@@ -23,7 +24,7 @@ io.on("connection" ,function(socket){
 });
 
 app.get("/", function(req,res){
-    res.render("index.ejs");
+    res.render("index");
 });
 
 server.listen(5080);
