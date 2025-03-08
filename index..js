@@ -23,7 +23,7 @@ io.on("connection" ,function(socket){
 });
 
 app.get("/", function(req,res){
-    res.render("index");
+    res.render("index.ejs");
 });
 
 server.listen(5080);
